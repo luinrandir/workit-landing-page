@@ -41,3 +41,28 @@
     line-height: 1;
   }
 }
+
+@mixin image-size($img-map, $img-breakpoints: b.$breakpoints) {
+  @each $img-breakpoint, $img-size in $img-map {
+    @if $img-breakpoint == "desktop" {
+      @include create-image-size($img-size);
+    } @else {
+      @if map-has-key($map: $img-breakpoints, $key: $img-breakpoint) {
+        $img-breakpoint: map-get(
+          $map: $img-breakpoints,
+          $key: $img-breakpoint,
+        );
+      }
+      @media (width <= $img-breakpoint) {
+        @include create-image-size($img-size);
+      }
+    }
+  }
+}
+
+@mixin create-image-size($img-size) {
+  @if type-of($value: $img-size) == "list" {
+    width: nth($list: $img-size, $n: 1);
+    height: nth($list: $img-size, $n: 2);
+  }
+}

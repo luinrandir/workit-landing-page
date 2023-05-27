@@ -18,7 +18,7 @@ button {
 }
 
 .button__secondary {
-  //color: $white;
+  color: $white;
   background-color: transparent;
   font-weight: map-get($map: $font-weights, $key: bold);
   border: none;

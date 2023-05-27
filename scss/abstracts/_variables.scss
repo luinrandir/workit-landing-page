@@ -85,3 +85,19 @@ $button-font-sizes: (
     32px,
   ),
 );
+
+// Images
+$image-sizes: (
+  desktop: (
+    767px,
+    441px,
+  ),
+  tablet: (
+    514px,
+    296px,
+  ),
+  mobile: (
+    320px,
+    184px,
+  ),
+);
