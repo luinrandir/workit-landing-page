@@ -13,18 +13,6 @@ body {
   display: grid;
   grid-template-rows: min-content;
 
-  nav {
-    $nav-padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: ($nav-padding * 2) $nav-padding;
-
-    .hero__logo {
-      width: 95.76px;
-      height: 24.61px;
-    }
-  }
   div {
     display: grid;
     grid-template-rows: min-content;
