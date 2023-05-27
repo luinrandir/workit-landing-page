@@ -1,1 +1,32 @@
-@use "../abstracts/colors" as c;
+@use "../abstracts" as *;
+
+button {
+  @include font-size($button-font-sizes);
+}
+
+.button__primary {
+  color: $primary-color;
+  background-color: $accent-color;
+  font-weight: map-get($map: $font-weights, $key: bold);
+  border: 2px solid $accent-color;
+  padding: 1rem;
+
+  &:is(:hover, :focus) {
+    color: $accent-color;
+    background-color: $primary-color;
+  }
+}
+
+.button__secondary {
+  //color: $white;
+  background-color: transparent;
+  font-weight: map-get($map: $font-weights, $key: bold);
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: $accent-color;
+  text-underline-offset: 0.5rem;
+
+  &:is(:hover, :focus) {
+    color: $accent-color;
+  }
+}

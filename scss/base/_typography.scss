@@ -1,53 +1,35 @@
-@use "../abstracts/functions" as f;
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap");
-
-$font-primary: "Manrope", sans-serif;
-$font-accent: "Fraunces", serif;
-
-$font-weights: (
-  regular: 400,
-  semi-bold: 600,
-);
-
-@mixin headings {
-  font-family: $font-accent;
-  font-weight: map-get($map: $font-weights, $key: semi-bold);
-  @content;
-}
-
-@mixin large-heading {
-  @include headings;
-  font-size: f.pxToRem(80px);
-  line-height: f.pxToRem(80px);
-}
-
-@mixin medium-heading {
-  @include headings;
-  font-size: f.pxToRem(56px);
-  line-height: f.pxToRem(64px);
-}
-
-@mixin small-heading {
-  @include headings;
-  font-size: f.pxToRem(32px);
-  line-height: f.pxToRem(40px);
-}
+@use "sass:math";
+@use "../abstracts/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope:wght@400;700&display=swap");
 
 body {
   font-family: $font-primary;
   font-weight: map-get($map: $font-weights, $key: regular);
-  font-size: f.pxToRem(18px);
-  line-height: f.pxToRem(32px);
+  @include font-size($body-font-sizes);
 }
 
 h1 {
-  @include large-heading;
+  @include headings;
+  @include font-size($h1-font-sizes);
+  u {
+    text-decoration-color: $accent-color;
+  }
 }
 
 h2 {
-  @include medium-heading;
+  @include headings;
+  @include font-size($h2-font-sizes);
+  color: $primary-color;
 }
 
 h3 {
-  @include small-heading;
+  @include headings;
+  @include font-size($h3-font-sizes);
+  color: $primary-color;
+}
+
+.call-to-action {
+  h2 {
+    //color: $white;
+  }
 }

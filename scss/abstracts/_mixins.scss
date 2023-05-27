@@ -1,0 +1,43 @@
+@use "sass:math";
+@use "functions" as f;
+@use "variables" as v;
+@use "breakpoints" as b;
+
+@mixin headings {
+  font-family: v.$font-accent;
+  font-weight: map-get($map: v.$font-weights, $key: semi-bold);
+  @content;
+}
+
+@mixin font-size($fs-map, $fs-breakpoints: b.$breakpoints) {
+  @each $fs-breakpoint, $fs-size in $fs-map {
+    @if $fs-breakpoint == "desktop" {
+      @include create-font-size($fs-size);
+    } @else {
+      @if map-has-key($map: $fs-breakpoints, $key: $fs-breakpoint) {
+        $fs-breakpoint: map-get(
+          $map: $fs-breakpoints,
+          $key: $fs-breakpoint,
+        );
+      }
+      @media (width <= $fs-breakpoint) {
+        @include create-font-size($fs-size);
+      }
+    }
+  }
+}
+
+@mixin create-font-size($fs-size) {
+  @if type-of($value: $fs-size) == "list" {
+    font-size: f.pxToRem(nth($list: $fs-size, $n: 1));
+    @if (length($list: $fs-size) > 1) {
+      line-height: math.div(
+        f.removeUnit(nth($list: $fs-size, $n: 1)),
+        f.removeUnit(nth($list: $fs-size, $n: 2))
+      );
+    }
+  } @else {
+    font-size: f.pxToRem($fs-size);
+    line-height: 1;
+  }
+}

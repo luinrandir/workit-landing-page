@@ -1,0 +1,87 @@
+// Colors
+$primary-color: hsl(273, 85%, 13%);
+$secondary-color: hsl(273, 100%, 99%);
+$accent-color: hsl(150, 100%, 63%);
+$neutral-color: hsl(271, 12%, 34%);
+$white: hsl(0, 0%, 100%);
+
+// Fonts
+$font-primary: "Manrope", sans-serif;
+$font-accent: "Fraunces", serif;
+
+$font-weights: (
+  regular: 400,
+  semi-bold: 600,
+  bold: 700,
+);
+
+$h1-font-sizes: (
+  desktop: (
+    80px,
+    80px,
+  ),
+  tablet: (
+    60px,
+    60px,
+  ),
+  mobile: (
+    50px,
+    50px,
+  ),
+);
+$h2-font-sizes: (
+  desktop: (
+    56px,
+    64px,
+  ),
+  tablet: (
+    48px,
+    56px,
+  ),
+  mobile: (
+    32px,
+    48px,
+  ),
+);
+$h3-font-sizes: (
+  desktop: (
+    32px,
+    40px,
+  ),
+  tablet: (
+    28px,
+    36px,
+  ),
+  mobile: (
+    28px,
+    36px,
+  ),
+);
+$body-font-sizes: (
+  desktop: (
+    18px,
+    32px,
+  ),
+  tablet: (
+    16px,
+    28px,
+  ),
+  mobile: (
+    16px,
+    28px,
+  ),
+);
+$button-font-sizes: (
+  desktop: (
+    18px,
+    32px,
+  ),
+  tablet: (
+    16px,
+    32px,
+  ),
+  mobile: (
+    16px,
+    32px,
+  ),
+);
