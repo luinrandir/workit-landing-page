@@ -32,8 +32,8 @@
     font-size: f.pxToRem(nth($list: $fs-size, $n: 1));
     @if (length($list: $fs-size) > 1) {
       line-height: math.div(
-        f.removeUnit(nth($list: $fs-size, $n: 1)),
-        f.removeUnit(nth($list: $fs-size, $n: 2))
+        f.removeUnit(nth($list: $fs-size, $n: 2)),
+        f.removeUnit(nth($list: $fs-size, $n: 1))
       );
     }
   } @else {

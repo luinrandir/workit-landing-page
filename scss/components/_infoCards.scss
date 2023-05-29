@@ -1,0 +1,24 @@
+@use "../abstracts" as a;
+
+.info__card {
+  $card-width: 354px;
+  max-width: $card-width;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  h2 {
+    max-width: fit-content;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .info__circle {
+    $width-size: 48px;
+    $height-size: 46px;
+    width: $width-size;
+    height: $height-size;
+    border: 1px solid a.$neutral-color;
+    border-radius: 50%;
+  }
+}
