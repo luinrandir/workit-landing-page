@@ -25,7 +25,7 @@ body {
     text-align: center;
   }
   .hero__icon {
-    @include a.image-size(a.$image-sizes);
+    @include a.image-size(a.$hero-image-sizes);
     justify-self: center;
     position: absolute;
     top: 389px;
@@ -37,8 +37,8 @@ body {
 }
 
 main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  // display: grid;
+  // grid-template-rows: 1fr 1fr;
 }
 
 .info {
@@ -51,4 +51,18 @@ main {
   background-color: a.$secondary-color;
   padding: $top-padding $general-padding $general-padding;
   border-radius: 100%/0 0 4% 4%; // Need to figure out how to achieve with formulas
+}
+.cta {
+  height: 100vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  position: relative;
+}
+.cta__image {
+  @include a.image-size(a.$cta-image-sizes);
+  position: absolute;
+  top: 0;
+  justify-self: center;
 }

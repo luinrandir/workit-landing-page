@@ -87,7 +87,7 @@ $button-font-sizes: (
 );
 
 // Images
-$image-sizes: (
+$hero-image-sizes: (
   desktop: (
     767px,
     441px,
@@ -100,4 +100,10 @@ $image-sizes: (
     320px,
     184px,
   ),
+);
+
+$cta-image-sizes: (
+  desktop: 477px,
+  tablet: 281px,
+  mobile: 281px,
 );

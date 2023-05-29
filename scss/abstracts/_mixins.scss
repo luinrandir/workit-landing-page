@@ -64,5 +64,8 @@
   @if type-of($value: $img-size) == "list" {
     width: nth($list: $img-size, $n: 1);
     height: nth($list: $img-size, $n: 2);
+  } @else {
+    width: $img-size;
+    height: $img-size;
   }
 }
