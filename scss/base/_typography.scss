@@ -6,6 +6,7 @@ body {
   font-family: $font-primary;
   font-weight: map-get($map: $font-weights, $key: regular);
   @include font-size($body-font-sizes);
+  color: $neutral-color;
 }
 
 h1 {
