@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+footer {
+  $gap: 57.62px;
+  $padding: 4rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: $padding 0;
+  gap: a.pxToRem($gap);
+  section {
+    $gap: 28px;
+    display: flex;
+    justify-content: center;
+    gap: a.pxToRem($gap);
+  }
+}
