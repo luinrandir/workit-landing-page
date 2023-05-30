@@ -15,13 +15,15 @@ body {
   grid-template-rows: min-content;
 
   div {
+    $gap: a.pxToRem(40px);
     display: grid;
     grid-template-rows: min-content;
+    justify-self: center;
+    width: 635px;
+    gap: $gap;
   }
   h1 {
     margin: 0;
-    justify-self: center;
-    align-self: center;
     text-align: center;
   }
   .hero__icon {
@@ -36,11 +38,6 @@ body {
   }
 }
 
-main {
-  // display: grid;
-  // grid-template-rows: 1fr 1fr;
-}
-
 .info {
   $general-padding: 1rem;
   $top-padding: 4rem;
@@ -51,6 +48,13 @@ main {
   background-color: a.$secondary-color;
   padding: $top-padding $general-padding $general-padding;
   border-radius: 100%/0 0 4% 4%; // Need to figure out how to achieve with formulas
+}
+@media (width >= 1440px) {
+  .info {
+    $template-repeat: 3;
+    grid-template-columns: repeat($template-repeat, 1fr);
+    grid-template-rows: none;
+  }
 }
 .cta {
   height: 100vh;
