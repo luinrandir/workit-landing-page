@@ -29,9 +29,3 @@ h3 {
   @include font-size($h3-font-sizes);
   color: $primary-color;
 }
-
-.call-to-action {
-  h2 {
-    color: $white;
-  }
-}
